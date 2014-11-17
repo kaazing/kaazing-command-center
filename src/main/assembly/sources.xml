@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2007-2014, Kaazing Corporation. All rights reserved.
+
+-->
+
+<assembly>
+  <id>sources</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+
+  <dependencySets>
+    <dependencySet>
+      <outputDirectory>/web/commandcenter/js</outputDirectory>
+      <includes>
+        <include>org.kaazing:gateway.client.javascript:zip:client</include>
+      </includes>
+      <unpack>true</unpack>
+      <unpackOptions>
+        <includes>
+          <include>**/WebSocket.js</include>
+          <include>**/WebSocket-debug.js</include>
+          <include>**/PostMessage.js</include>
+          <include>**/PostMessage-debug.js</include>
+        </includes>
+      </unpackOptions>
+      <fileMode>0644</fileMode>
+    </dependencySet>
+  </dependencySets>
+
+  <fileSets>
+    <fileSet>
+      <outputDirectory>/</outputDirectory>
+      <directory>src/main/gateway</directory>  <!-- note non-standard location -->
+      <excludes>
+        <exclude>**/*.jpg</exclude>
+        <exclude>**/*.bmp</exclude>
+        <exclude>**/*.gif</exclude>
+        <exclude>**/*.png</exclude>
+        <exclude>web/commandcenter/js/**</exclude>  <!-- coming from target -->
+        <exclude>web/commandcenter/test/**</exclude>  <!-- not included at all -->
+      </excludes>
+      <fileMode>0644</fileMode>
+    </fileSet>
+
+    <fileSet>
+      <outputDirectory>/</outputDirectory>
+      <directory>src/main/gateway</directory>
+      <includes>
+        <include>**/*.jpg</include>
+        <include>**/*.bmp</include>
+        <include>**/*.gif</include>
+        <include>**/*.png</include>
+      </includes>
+      <fileMode>0644</fileMode>
+    </fileSet>
+
+    <!-- Copy our compressed/obfuscated JS files -->
+    <fileSet>
+      <outputDirectory>/web/commandcenter/js</outputDirectory>
+      <directory>target/classes/</directory>
+      <includes>
+        <include>**</include>
+      </includes>
+      <fileMode>0644</fileMode>
+    </fileSet>
+
+    <!-- Copy the YUI files so we can have local distribution -->
+    <fileSet>
+      <outputDirectory>/web/commandcenter/yui</outputDirectory>
+      <directory>target/yui/yui/build/</directory>
+      <includes>
+        <include>**</include>
+      </includes>
+      <fileMode>0644</fileMode>
+    </fileSet>
+
+    <!-- Copy the YUI gallery files for 'stlsmiths' so we can have local distribution.
+         Note that we copy into 'commandcenter/yui' because we've set that in the YUI object
+         as the 'base' directory.-->
+    <fileSet>
+      <outputDirectory>/web/commandcenter/yui-gallery</outputDirectory>
+      <directory>target/yui-gallery/stlsmiths/new-gallery/build/</directory>
+      <includes>
+        <include>gallery-contextmenu-view/**</include>
+        <include>gallery-datatable-selection/**</include>
+      </includes>
+      <fileMode>0644</fileMode>
+    </fileSet>
+
+    <!-- Copy the YUI gallery files for 'solmsted' so we can have local distribution.
+         Note that we copy into 'commandcenter/yui' because we've set that in the YUI object
+         as the 'base' directory. Also note that this structure is different from stlsmiths,
+         as we only have 1 project from his large library in artifactory. -->
+    <fileSet>
+      <outputDirectory>/web/commandcenter/yui-gallery</outputDirectory>
+      <directory>target/yui-gallery/solmsted/</directory>
+      <includes>
+        <include>**</include>
+      </includes>
+      <fileMode>0644</fileMode>
+    </fileSet>
+    
+  </fileSets>
+</assembly>
