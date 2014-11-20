@@ -1,0 +1,22 @@
+This product depends on less.js 1.4.1
+
+    License:  https://github.com/less/less.js/blob/master/LICENSE (Apache 2.0 License)
+    Homepage: http://lesscss.org/
+
+
+This product depends on PrefixFree 1.0.7
+
+    License: http://opensource.org/licenses/MIT (MIT License)
+    Homepage:    https://leaverou.github.io/prefixfree/
+
+
+This product depends on stacktrace.js 0.6.0
+
+    License: https://github.com/stacktracejs/stacktrace.js/blob/master/LICENSE (Public Domain)
+    Homepage:    http://www.stacktracejs.com/
+
+
+This product depends on YUI and YUI Gallery 3.1.1
+
+    License URL: https://github.com/yui/yui3/blob/master/LICENSE.md (BSD 3-Clause License)
+    Homepage:    http://yuilibrary.com/
