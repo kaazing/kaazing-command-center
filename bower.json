@@ -1,8 +1,8 @@
 {
     "name": "kaazing-command-center",
     "dependencies": {
-        "yui": "https://github.com/yui/yui3.git#3.18.0",
+        "yui3": "3.18.0",
         "yui3-gallery": "https://github.com/yui/yui3-gallery.git",
-        "kaazing-client-javascript": "git@github.com:kaazing/bower-kaazing-client-javascript.git#>=5.0.0-1 <5.1.0"
+        "kaazing-client-javascript": ">=5.0.0-1 <5.1.0"
     }
 }
