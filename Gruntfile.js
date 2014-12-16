@@ -45,7 +45,7 @@ module.exports = function(grunt) {
                 mode: 0644
             },
             yui: {
-                cwd: 'bower_components/yui/build',
+                cwd: 'bower_components/yui3/build',
                 src: ['**/*-min.js', 
                       '**/lang/**', 
                       '**/*.css', 
