@@ -33,7 +33,7 @@ CC.FOOTER_LOGO_IMAGE_URL = "../images/footer-logo.png";
 CC.LOGIN_LOGO_IMAGE_URL = '../images/about-logo.png';
 CC.ABOUT_LOGO_IMAGE_URL = '../images/about-logo.png';
 CC.UPDATE_LOGO_IMAGE_URL = '../images/about-logo.png';
-CC.COPYRIGHT_NOTICE = 'Copyright &copy; 2013-2014 Kaazing Corporation. All rights reserved.';
+CC.COPYRIGHT_NOTICE = 'Copyright &copy; 2014 Kaazing Corporation. Licensed under Apache 2.0.';
 
 // Create an object with functions that mimic the window.console object made  
 // available by tools like Firebug or the "Dev Tools" add-on in IE8+  
