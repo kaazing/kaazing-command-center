@@ -1,4 +1,4 @@
-# Generated on 2014-12-19 17:12:53-0800
-kaazing-client-javascript: 5.0.0-53
+# Generated on 2015-01-05 15:01:36-0800
+kaazing-client-javascript: 5.0.0-54
 yui3: 3.18.0
 yui3-gallery: 2011.01.12
