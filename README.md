@@ -1,5 +1,10 @@
 #kaazing-command-center
 
+[![Build Status][build-status-image]][build-status]
+
+[build-status-image]: https://travis-ci.org/kaazing/kaazing-command-center.svg?branch=develop
+[build-status]: https://travis-ci.org/kaazing/kaazing-command-center
+
 ##Installing Dependencies
 Before you can build kaazing-command-center, you must install and configure the following dependencies on your machine:
 
