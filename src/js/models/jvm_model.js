@@ -154,6 +154,13 @@ YUI.add('jvm-model', function(Y) {
                         var jvmData = item.jvmData; 
                         var readTime = item.readTime;
 
+                        // just in case there is somehow a duplicate of KG-14770
+                        // that shows up for System data, put in a check that
+                        // jvmData is actually non-null.
+                        if (jvmData == null || jvmData == undefined) {
+                            continue;
+                        }
+
                         // add the readTime to the summary data so we keep it
                         // around in a reasonable place.
                         jvmData.push(readTime);
