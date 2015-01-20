@@ -1434,6 +1434,10 @@ function MngtAPI_SNMP() {
 
         var readTime = (new Date()).getTime();
 
+        // The incoming systemData is an object that is the parsed buffer,
+        // with community="public", errorCode=0, requestId=..., values=Object.
+        // The 'values' object is pairs of OIDs and their values. Some may
+        // be in JSON.
         if ((systemData !== null) && (systemData.values !== undefined)) {
             var values = systemData.values;
 
@@ -1447,6 +1451,10 @@ function MngtAPI_SNMP() {
 
             $this.setSystemAttribute(systemObj, "readTime", readTime);
 
+            // The summaryData is supposed to be a list of entries where
+            // each entry has 2 fields: readTime and systemData. For some
+            // reason it is possible that the systemData field in some
+            // entries is null. These entries should be excluded.
             $this.parseJSONField(systemObj, 'summaryData', false); 
 
             callback(systemObj);

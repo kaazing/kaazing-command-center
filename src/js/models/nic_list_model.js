@@ -166,6 +166,13 @@ YUI.add('nic-list-model', function(Y) {
                         var nicData = item.nicData; // the array of N NICs, M values per NIC
                         var readTime = item.readTime;
 
+                        // just in case there is somehow a duplicate of KG-14770
+                        // that shows up for System data, put in a check that
+                        // nicData is actually non-null.
+                        if (nicData == null || nicData == undefined) {
+                            continue;
+                        }
+
                         // add the readTime in its slot in each of the summary data 
                         // items (one per NIC) (last), so we keep it around.
                         for (var j = 0; j < netInterfaceNames.length; j++) {
