@@ -20,11 +20,11 @@ Before you can build kaazing-command-center, you must install and configure the 
 * src: Source files
 * dist: Distribution directory will be generated which has generated gateway.client.javascript.js.
 
-##Steps to build gateway.client.javascript project
+##Steps to build kaazing-command-center project
 Assumption: node, npm, grunt and bower Command Line Interface(CLI) should be installed. Following steps will build the project and generate files in the dist directory.
 
-* Clone the repo: ```git clone https://github.com/kaazing/gateway.client.javascript```
-* Go to the cloned directory: ```cd gateway.client.javascript```
+* Clone the repo: ```git clone https://github.com/kaazing/kaazing-command-center.git```
+* Go to the cloned directory: ```cd kaazing-command-center```
 * Command to install all the project dependencies:``` npm install ```
 * Command to install all the package dependencies:``` bower install ```
 * Command to run configured tasks: ```grunt```
