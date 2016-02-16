@@ -26,7 +26,7 @@ function start(challengeHandlerCreatorFn) {
     // to avoid Flash of Unstyled Content.
     document.getElementById('offscreenData').style.visibility = 'visible';
 
-    var ROOT_PATH = '/commandcenter';
+    var ROOT_PATH = '../';
 
     setupYUIPatches();
 
