@@ -149,6 +149,14 @@ YUI.add('system-model', function(Y) {
                         var systemData = item.systemData;
                         var readTime = item.readTime;
 
+                        // There is a weird bug (KG-14770) where somehow on a
+                        // Windows Server 2012 it is possible to return a null
+                        // value for systemData, even though there is a valid
+                        // readTime. We'll just throw those out.
+                        if (systemData == null || systemData == undefined) {
+                            continue;
+                        }
+
                         // add the readTime in its slot in the summary data (last), 
                         // so we keep it around.
                         systemData.push(readTime);

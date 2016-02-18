@@ -173,6 +173,13 @@ YUI.add('cpu-list-model', function(Y) {
                         var cpuData = item.cpuData; // the N CPUs, M values per CPU
                         var readTime = item.readTime;
 
+                        // just in case there is somehow a duplicate of KG-14770
+                        // that shows up for System data, put in a check that
+                        // cpuData is actually non-null.
+                        if (cpuData == null || cpuData == undefined) {
+                            continue;
+                        }
+
                         // add the readTime in its slot in each of the summary data 
                         // items (one per CPU) (last), so we keep it around. We don't 
                         // send it over this way because that takes wastes space.
